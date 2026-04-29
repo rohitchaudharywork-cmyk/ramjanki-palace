@@ -1,0 +1,65 @@
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: [
+    './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/components/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/app/**/*.{js,ts,jsx,tsx,mdx}',
+  ],
+  darkMode: 'class',
+  theme: {
+    extend: {
+      colors: {
+        maroon: {
+          50: '#fdf4f4',
+          100: '#fbe8e8',
+          200: '#f7d5d5',
+          300: '#f0b3b3',
+          400: '#e58585',
+          500: '#d75c5c',
+          600: '#c33d3d',
+          700: '#a32f2f',
+          800: '#872929',
+          900: '#6f2626',
+          950: '#3c1010',
+        },
+        gold: {
+          50: '#fefce8',
+          100: '#fef9c3',
+          200: '#fef08a',
+          300: '#fde047',
+          400: '#facc15',
+          500: '#eab308',
+          600: '#ca8a04',
+          700: '#a16207',
+          800: '#854d0e',
+          900: '#713f12',
+          950: '#422006',
+        },
+        cream: {
+          50: '#fefdfb',
+          100: '#fef9f3',
+          200: '#fdf3e7',
+          300: '#fbeacc',
+          400: '#f8daa8',
+          500: '#f3c57a',
+          600: '#eca53e',
+          700: '#df8628',
+          800: '#bb6a23',
+          900: '#975824',
+          950: '#512b10',
+        },
+      },
+      fontFamily: {
+        heading: ['Playfair Display', 'serif'],
+        body: ['Poppins', 'sans-serif'],
+      },
+      backgroundImage: {
+        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+        'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+        'mandala': "url('/patterns/mandala.svg')",
+        'floral': "url('/patterns/floral.svg')",
+      },
+    },
+  },
+  plugins: [],
+}
