@@ -5,10 +5,10 @@ import Image from 'next/image'
 import { useState, useEffect } from 'react'
 
 const carouselImages = [
-  '/images/Entrance.jpg',
-  '/images/Entrance from Front.jpg',
-  '/images/Stage.jpg',
-  '/images/Theme Entrance.jpg',
+  { src: '/images/Entrance.jpg', alt: 'Ram Janki Palace - Elegant Entrance to Open Garden Wedding Venue in Muzaffarpur' },
+  { src: '/images/Entrance from Front.jpg', alt: 'Ram Janki Palace Front Entrance View - Premium Wedding Venue Muzaffarpur, Bihar' },
+  { src: '/images/Stage.jpg', alt: 'Ram Janki Palace Wedding Stage Setup - Open Garden Reception Venue Muzaffarpur' },
+  { src: '/images/Theme Entrance.jpg', alt: 'Ram Janki Palace Themed Entrance Decoration - Royal Wedding Venue Muzaffarpur' },
 ]
 
 function ThemeToggle() {
@@ -84,15 +84,15 @@ export default function HeroSection() {
       <div className="absolute inset-0">
         {carouselImages.map((img, index) => (
           <motion.div
-            key={img}
+            key={img.src}
             className="absolute inset-0"
             initial={{ opacity: 0 }}
             animate={{ opacity: currentSlide === index ? 0.25 : 0 }}
             transition={{ duration: 2 }}
           >
             <Image
-              src={img}
-              alt={`Wedding venue ${index + 1}`}
+              src={img.src}
+              alt={img.alt}
               fill
               className="object-cover"
               priority={index === 0}
