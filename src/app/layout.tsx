@@ -99,6 +99,9 @@ export const metadata: Metadata = {
     apple: '/images/logo.png',
   },
   manifest: '/manifest.webmanifest',
+  verification: {
+    google: 'Vjg70hGssTQzBZ9pXfEfcyIYViO3_b1aEhMakOcngHM',
+  },
   other: {
     'geo.region': 'IN-BR',
     'geo.placename': 'Muzaffarpur',
